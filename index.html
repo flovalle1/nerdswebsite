@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+<div class="container greenshift">
+    <div class="grid">
+      <div class="col-10_sm-12">PATIENT ID #1888450</div>
+      <div class="col-2_sm-12">12/04/18 20:15</div>
+    </div>
+  </div>
+  
+  <div class="container">
+      <div class="grid">
+          <div class="col-10_sm-12 graph">
+   
+                  <div class="cell cell-1"></div>
+                  <div class="cell cell-2"></div>
+                  <div class="cell cell-3"></div>
+                  <div class="cell cell-4"></div>
+                  <div class="cell cell-5"></div>
+                  <div class="cell cell-6"></div>
+  
+          </div>
+          
+          <div class="col-2_sm-12">
+              <div class="number-1"><span>&#9829;</span></div>
+          </div>
+    </div>
+  </div>
+      
+      
+      
+      
+  <svg width="0" height="0" class="filters">
+      <defs>
+          <filter id="filter0_dd" x="0.858887" y="28.9809" width="644.262" height="124.108" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+          <feOffset/>
+          <feGaussianBlur stdDeviation="2"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0.215686 0 0 0 0 0.686275 0 0 0 0 0.54902 0 0 0 1 0"/>
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+          <feOffset/>
+          <feGaussianBlur stdDeviation="4"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0.215686 0 0 0 0 0.686275 0 0 0 0 0.54902 0 0 0 1 0"/>
+          <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape"/>
+          </filter>
+      
+  
+      </defs>
+  </svg>
+      
+<style>
+.number-1 {
+  font-size: 6rem;
+  text-align: center;
+  width: 6rem;
+  position: relative;
+}
+.number-1:after {
+  display: block;
+  position: absolute;
+  content: "60";
+  width: 12rem;
+  height: 10rem;
+  top: 0;
+  left: 0;
+}
+.number-1 span {
+  font-size: 2rem;
+  position: relative;
+  top: -2rem;
+  left: -5rem;
+  opacity: 1;
+  animation: beat 1s infinite;
+}
+
+.greenshift {
+  background: #151515;
+  margin: 2rem 0;
+  background-position: top left, top right;
+  color: #37af8c;
+  font-family: "Exo 2", sans-serif;
+  font-size: 18px;
+  text-shadow: 0 0 4px #37af8c;
+}
+.greenshift:after {
+  /* Interlace effect */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.2) 80%);
+  background-size: 5px 3px;
+  display: block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.graph {
+  /* the green gradient */
+  outline: 1px #37af8c solid;
+  box-shadow: 0 0 4px #37af8c;
+  padding: 0;
+  background: linear-gradient(90deg, #231f20 0, #37af8c 50%, #231f20 50%);
+  animation: travel 6s infinite linear;
+  display: flex;
+  background-size: 100% auto;
+  background-position: -380px 0;
+  height: 200px;
+}
+
+.cell {
+  margin: 0;
+  display: flex;
+  width: 16.7%;
+  height: 100%;
+  background: url(https://gistcdn.githack.com/alexmwalker/0993e72c768ddcb45c1b1e41d3ffaffe/raw/ac804d1a4153c6a7595a9778626005feb34098a8/hr.svg);
+  /* this SVG doesn't have the numbers */
+  background: url(https://gistcdn.githack.com/alexmwalker/ab0ffcafbeed4f91756a06531c5cba1d/raw/13a6b6d3b69316a8064f26dd9d341451c34f6bff/hr-with-numbers.svg);
+  background-size: 700% auto;
+  animation: shuffle 36s steps(1) infinite;
+}
+.cell-1 {
+  background-position: 0, 0;
+  animation-delay: -2s;
+}
+
+.cell-2 {
+  background-position: 16.6%, 0;
+  animation-delay: -13s;
+}
+
+.cell-3 {
+  background-position: 33.3%, 0;
+  animation-delay: -30s;
+}
+
+.cell-4 {
+  background-position: 50%, 0;
+  animation-delay: -5s;
+}
+
+.cell-5 {
+  background-position: 66.6%, 0;
+  animation-delay: -22s;
+}
+
+.cell-6 {
+  background-position: 83.3%, 0;
+  animation-delay: -9s;
+}
+
+@keyframes shuffle {
+  0% {
+    background-position: 83.3%, 0;
+  }
+  16.6% {
+    background-position: 33.33%, 0;
+  }
+  33.3% {
+    background-position: 66.66%, 0;
+  }
+  50% {
+    background-position: 16.66%, 0;
+  }
+  66.6% {
+    background-position: 50%, 0;
+  }
+  83.3% {
+    background-position: 0%, 0;
+  }
+}
+@keyframes beat {
+  0% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0.3;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes travel {
+  0% {
+    background-position: -380px 0;
+  }
+  100% {
+    background-position: 380px 0;
+  }
+}
+</style>
+
+</body>
+</html>
